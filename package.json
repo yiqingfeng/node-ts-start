@@ -1,0 +1,22 @@
+{
+  "name": "node-ts-start",
+  "version": "1.0.0",
+  "description": "node TypeScript start",
+  "main": "index.js",
+  "scripts": {
+		"dev": "ts-node index.ts",
+		"start": "npm run dev",
+		"build": "tsc"
+  },
+  "keywords": [
+    "node",
+    "typescript"
+  ],
+  "author": "nimo",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.0.14",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.6"
+  }
+}
