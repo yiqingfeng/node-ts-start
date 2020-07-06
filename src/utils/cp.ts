@@ -11,11 +11,11 @@ type CpOptions = cp.ExecSyncOptionsWithStringEncoding;
 /**
  * @description 执行指定命令
  */
-function cpExec(cmd: string, options ? : CpOptions): resData < string > ;
+export function cpExec(cmd: string, options ? : CpOptions): resData < string > ;
 
-function cpExec(cmd: string, options: CpOptions, isAsync: boolean): Promise < any > | resData < string > ;
+export function cpExec(cmd: string, options: CpOptions, isAsync: boolean): Promise < any > | resData < string > ;
 
-function cpExec(cmd: string, options ? : CpOptions, isAsync ? : boolean): Promise < any > | resData < string > {
+export function cpExec(cmd: string, options ? : CpOptions, isAsync ? : boolean): Promise < any > | resData < string > {
   const opts: CpOptions = Object.assign({
     maxBuffer: 4 << 20,
   }, options);
@@ -43,8 +43,4 @@ function cpExec(cmd: string, options ? : CpOptions, isAsync ? : boolean): Promis
     res.errCode = -1;
   }
   return res;
-}
-
-export default {
-  cpExec,
 }
