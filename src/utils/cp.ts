@@ -1,7 +1,7 @@
 /**
  * @description 子进程相关处理
  */
-/// <reference> utils.d.ts
+/// <reference> ../../types/utils.d.ts
 import cp from 'child_process';
 
 type CpOptions = cp.ExecSyncOptionsWithStringEncoding;
@@ -20,7 +20,7 @@ function cpExec(cmd: string, options?: CpOptions, isAsync?: boolean): Promise<an
   // 异步处理
   if (isAsync) {
     return new Promise((resolve, reject) => {
-      cp.exec(cmd, opts, function (error, stdout, stderr) {
+      cp.exec(cmd, opts, function (error, stdout) {
         if (error) {
           return reject(error);
         }

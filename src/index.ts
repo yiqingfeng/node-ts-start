@@ -1,7 +1,9 @@
 import utils from './utils';
 
-utils.cpExec('echo "hello"');
+console.log(utils.cpExec('echo hello').data);
 
-export function hi(name: string): string {
+function hi(name: string): string {
   return `hi, ${name}!`;
 }
+
+console.log(hi('Jack'));

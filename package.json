@@ -4,7 +4,7 @@
   "description": "node TypeScript start",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node index.ts",
+    "dev": "ts-node src/index.ts",
     "start": "npm run dev",
 		"build": "tsc",
 		"lint": "eslint src/**/*.ts"
