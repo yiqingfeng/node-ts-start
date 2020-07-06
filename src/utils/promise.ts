@@ -53,3 +53,31 @@ export function multiRequest<T>(requestFns: Array<RequestFn<T>>, maxNum = 5): Pr
     next();
   });
 }
+
+/**
+ * @description Promise 重试
+ * 成功后 resolve 结果，失败后重试，尝试超过一定次数才真正的 reject
+ * @param p 待执行的异步函数
+ * @param retryNum {Number} 重试次数，默认为 5 次
+ */
+// 异步函数版
+export async function requestRetry<T>(fn: RequestFn<T>, maxRetryNum = 5): Promise<any> {
+  let retryNum = maxRetryNum + 1;
+  let isSuccess = false; // 是否请求成功
+
+  let res: T;
+  do {
+    try {
+      res = await fn();
+      isSuccess = true;
+    } catch (error) {
+      res = error;
+    }
+    retryNum--;
+  } while (retryNum > 0 && !isSuccess);
+
+  if (isSuccess) {
+    return Promise.resolve(res);
+  }
+  return Promise.reject(res);
+}

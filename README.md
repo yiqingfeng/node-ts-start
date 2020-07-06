@@ -14,9 +14,15 @@ npm install
 npm run dev
 ```
 
+## 支持的特性
+
+- node + ts + eslint 开发
+- vscode 快启动开发
+- utils 通用方法支持（相关API接口文档待完善）
+
 
 ## 要做的事情
 
-- tslint
-- 通用 utils 支持
+- [x] tslint
+- [ ] 通用 utils 支持 (持续拓展中，后续可以考虑单独抽离出来)
 - ...
