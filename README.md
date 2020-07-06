@@ -34,6 +34,13 @@ npm run dev
 [optional footer]
 ```
 
+想进一步了解：
+
+- https://commitlint.js.org/#/
+- https://juejin.im/entry/5b1539e0e51d4506d0620fed
+
+
+> 使用时，也可以搭配 [gitmoji](https://github.com/carloscuesta/gitmoji) 填充你的 git commit messgae
 
 
 ## 要做的事情
