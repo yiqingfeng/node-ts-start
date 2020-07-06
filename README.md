@@ -18,7 +18,7 @@ npm run dev
 
 - node + ts + eslint 开发
 - vscode 快启动开发
-- commitlint git 提交信息检查
+- 
 - utils 通用方法支持（相关API接口文档待完善）
 
 
@@ -42,10 +42,16 @@ npm run dev
 
 > 使用时，也可以搭配 [gitmoji](https://github.com/carloscuesta/gitmoji) 填充你的 git commit messgae
 
+> 注意：
+>
+> commitlint 如果没有生效，请检查 husky 是否正常安装（有可能 git 版本较低，安装失败了）
+
 
 ## 要做的事情
 
-- [x] tslint
+- [x] tslint (目前使用 eslint)
 - [ ] 通用 utils 支持 (持续拓展中，后续可以考虑单独抽离出来)
-- 支持 `npx` 快速创建本地项目。（`npx node-ts-start create demo`）
+- [ ] 支持 `npx` 快速创建本地项目。（`npx node-ts-start create demo`）
+- [x] commitlint git 提交信息检查。
 - ...
+
