@@ -1,4 +1,4 @@
-declare interface resData < T > {
-	errCode: number | string;
-	data: T;
+export declare interface resData < T > {
+  errCode: number | string;
+  data: T;
 }

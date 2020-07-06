@@ -1,19 +1,21 @@
 /**
  * @description 子进程相关处理
  */
-/// <reference> ../../types/utils.d.ts
+import * as utils from '../../types/utils'; // 引入声明
+
 import cp from 'child_process';
 
+type resData<T> = utils.resData<T>;
 type CpOptions = cp.ExecSyncOptionsWithStringEncoding;
 
 /**
  * @description 执行指定命令
  */
-function cpExec(cmd: string, options?: CpOptions): resData<string>;
+function cpExec(cmd: string, options ? : CpOptions): resData < string > ;
 
-function cpExec(cmd: string, options: CpOptions, isAsync: boolean): Promise<any> | resData<string>;
+function cpExec(cmd: string, options: CpOptions, isAsync: boolean): Promise < any > | resData < string > ;
 
-function cpExec(cmd: string, options?: CpOptions, isAsync?: boolean): Promise<any> | resData<string> {
+function cpExec(cmd: string, options ? : CpOptions, isAsync ? : boolean): Promise < any > | resData < string > {
   const opts: CpOptions = Object.assign({
     maxBuffer: 4 << 20,
   }, options);
@@ -30,7 +32,7 @@ function cpExec(cmd: string, options?: CpOptions, isAsync?: boolean): Promise<an
     });
   }
   // 同步处理
-  const res: resData<string> = {
+  const res: resData < string > = {
     errCode: 0,
     data: '',
   };
