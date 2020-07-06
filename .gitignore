@@ -1,6 +1,5 @@
 *.DS_Store
 .vscode/
-.vscode
 .idea
 
 node_modules/
