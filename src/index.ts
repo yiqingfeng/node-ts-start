@@ -1,9 +1,11 @@
-import utils from './utils';
+// import utils from './utils';
 
-console.log(utils.cpExec('echo hello').data);
+// console.log(utils.cpExec('echo hello').data);
 
-function hi(name: string): string {
-  return `hi, ${name}!`;
-}
+// function hi(name: string): string {
+//   return `hi, ${name}!`;
+// }
 
-console.log(hi('Jack'));
+// console.log(hi('Jack'));
+
+import './demo/di'

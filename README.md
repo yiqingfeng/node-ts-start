@@ -9,7 +9,7 @@
 ```bash
 git clone https://github.com/yiqingfeng/node-ts-start
 
-npm install
+npm install --legacy-peer-deps
 
 npm run dev
 ```
